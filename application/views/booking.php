@@ -43,7 +43,7 @@
         <!-- Spinner End -->
 
 
-        <!-- Navbar & Hero Start -->
+        <!-- Navbar Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="<?php echo base_url(); ?>web" class="navbar-brand p-0">
@@ -62,8 +62,8 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tentang</a>
                             <div class="dropdown-menu m-0">
                                 <a href="<?php echo base_url(); ?>about" class="dropdown-item">Tentang Kami</a>
-                                <a href="<?php echo base_url(); ?>team" class="dropdown-item">Team Kami</a>
-                                <a href="<?php echo base_url(); ?>testimonial" class="dropdown-item">Testimoni</a>
+                                <a href="<?php echo base_url(); ?>about/team" class="dropdown-item">Tim Kami</a>
+                                <a href="<?php echo base_url(); ?>about/testimonial" class="dropdown-item">Testimoni</a>
                             </div>
                         </div>
                         <a href="<?php echo base_url(); ?>contact" class="nav-item nav-link">Kontak</a>
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+        <!-- Navbar End -->
 
         <!-- Menu Start -->
         <div class="container-xxl py-5">
@@ -321,7 +321,7 @@
         <!-- Menu End -->
 
 
-        <!-- Reservation Start -->
+        <!-- Booking Start -->
         <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
             <div class="row g-0">
                 <div class="col-md-6 bg-dark d-flex align-items-center">
@@ -331,40 +331,40 @@
                     <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Pemesanan</h5>
                         <h1 class="text-white mb-4">Pesan Secara Online</h1>
-                        <form>
+                        <form action="<?php echo base_url('booking/kirim'); ?>" method="post">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
                                         <label for="name">Nama</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Whatsapp</label>
+                                        <input type="whatsapp" class="form-control" name="whatsapp" id="whatsapp" placeholder="Your Whatsapp">
+                                        <label for="whatsapp">Whatsapp</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <input type="text" class="form-control datetimepicker-input" name="datetime" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
                                         <label for="datetime">Tanggal & Waktu</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Alamat</label>
+                                        <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Your address">
+                                        <label for="alamat">Alamat</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control" placeholder="Special Request" name="message" id="message" style="height: 100px"></textarea>
                                         <label for="message">Menu yang Dipesan</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-50 py-3" type="submit">Pesan Sekarang</button>
+                                    <button class="btn btn-primary w-50 py-3" name="submit" id="submit" type="submit">Pesan Sekarang</button>
                                 </div>
                             </div>
                         </form>
@@ -372,7 +372,7 @@
                 </div>
             </div>
         </div>
-        <!-- Reservation Start -->
+        <!-- Booking Start -->
         
 
         <!-- Footer Start -->
@@ -380,38 +380,38 @@
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Reservation</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Perusahaan</h4>
+                        <a class="btn btn-link" href="">Tentang Kami</a>
+                        <a class="btn btn-link" href="">Kontak Kami</a>
+                        <a class="btn btn-link" href="">Pemesanan</a>
+                        <a class="btn btn-link" href="">Kebijakan Pribadi</a>
+                        <a class="btn btn-link" href="">Syarat & Ketentuan</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Kontak</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>UBSI Surakarta</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62812-3456-7890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>kelompok4@gmail.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                        <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                        <p>09AM - 09PM</p>
-                        <h5 class="text-light fw-normal">Sunday</h5>
-                        <p>10AM - 08PM</p>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Jam Buka</h4>
+                        <h5 class="text-light fw-normal">Senin - Jumat </h5>
+                        <p>10.00 - 20.00</p>
+                        <h5 class="text-light fw-normal">Sabtu & Minggu</h5>
+                        <p>09.00 - 22.00</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Kritik & Saran</h4>
+                        <p>Silahkan sampaikan kritik dan saran anda pada kami</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
                         </div>
                     </div>
                 </div>
@@ -420,18 +420,16 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                            Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Web Programming II</a>
+                            Didesain oleh <a class="border-bottom">Kelompok 4</a><br><br>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
+                                <a href="<?php echo base_url(); ?>">Beranda</a>
+                                <a href="<?php echo base_url(); ?>">Cookies</a>
+                                <a href="<?php echo base_url(); ?>">Bantuan</a>
+                                <a href="<?php echo base_url(); ?>">FAQ</a>
                             </div>
                         </div>
                     </div>

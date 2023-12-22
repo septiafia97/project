@@ -43,7 +43,7 @@
         <!-- Spinner End -->
 
 
-        <!-- Navbar & Hero Start -->
+        <!-- Navbar Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="<?php echo base_url(); ?>web" class="navbar-brand p-0">
@@ -62,8 +62,8 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tentang</a>
                             <div class="dropdown-menu m-0">
                                 <a href="<?php echo base_url(); ?>about" class="dropdown-item">Tentang Kami</a>
-                                <a href="<?php echo base_url(); ?>team" class="dropdown-item">Team Kami</a>
-                                <a href="<?php echo base_url(); ?>testimonial" class="dropdown-item">Testimoni</a>
+                                <a href="<?php echo base_url(); ?>about/team" class="dropdown-item">Tim Kami</a>
+                                <a href="<?php echo base_url(); ?>about/testimonial" class="dropdown-item">Testimoni</a>
                             </div>
                         </div>
                         <a href="<?php echo base_url(); ?>contact" class="nav-item nav-link active">Kontak</a>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+        <!-- Navbar End -->
 
 
         <!-- Contact Start -->
@@ -203,10 +203,8 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Web Programming II</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Didesain oleh <a class="border-bottom" href="https://htmlcodex.com">Kelompok 4</a><br><br>
+                            &copy; <a class="border-bottom" href="#">Web Programming II</a>
+                            Didesain oleh <a class="border-bottom">Kelompok 4</a><br><br>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

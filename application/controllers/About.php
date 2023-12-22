@@ -8,4 +8,12 @@ class About extends CI_Controller{
  public function index(){
     $this->load->view('about');
     }
+
+ public function team(){
+    $this->load->view('team');
+    }
+
+ public function testimonial(){
+    $this->load->view('testimonial');
+    }
 }
